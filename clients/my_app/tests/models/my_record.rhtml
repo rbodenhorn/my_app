@@ -1,0 +1,21 @@
+<% # ========================================================================
+   # MyApp.MyRecord Unit Test
+   # ========================================================================
+%>
+<% content_for('final') do %>
+
+<script>
+
+MyApp.server.preload(MyApp.FIXTURES) ;
+Test.context("MyApp.MyRecord",{
+
+  "Records should exist": function() {
+assert(MyApp.MyRecord.find(1))  ;
+}
+}) ;
+
+if (window.main && (appMain = main)) main = null ;
+
+</script>
+
+<% end %>
